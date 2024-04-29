@@ -1,0 +1,207 @@
+/Users/smsarov/PycharmProjects/meth_opt/venv/bin/python /Users/smsarov/PycharmProjects/meth_opt/main.py
+
+                 GIVEN
+   8       15      23      19      9     | 7
+   2       1       9       10      1     | 14
+   1       4       8       9       3     | 11
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+                 GIVEN
+   8       15      23      19      9     | 7
+   2       1       9       10      1     | 14
+   1       4       8       9       3     | 11
+   0       0       0       0       0     | 14
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+
+   8       15      23      19      9     | 7
+   2       1       9       10      1     | 14
+   1       4       8       9       3     | 11
+   4       10      1       3       12    | 14
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+           NORTH-WEST METHOD
+   7      None    None    None    None   | 0
+   1       13     None    None    None   | 0
+  None     2       2       5       2     | 0
+  None    None    None    None     14    | 0
+   __      __      __      __      __   _|
+   0       0       0       0       0
+
+start cost is 314
+
+--------------------------------------------------
+
+
+              CURRENT PLAN
+   7      None    None    None    None   | 7
+   1       13     None    None    None   | 14
+  None     2       2       5       2     | 11
+  None    None    None    None     14    | 14
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+            POTENTIAL TABLE
+  None     8       12      7       3     | 0
+  None    None     4       4       1     | -6
+   -4     None    None    None    None   | -3
+  -10      -3     -16     -15     None   | 6
+   __      __      __      __      __   _|
+   8       7       11      12      6
+
+
+                 CURVE
+                                         |
+                                         |
+                   □       -⟶      □     |
+                   ⧆       ⟵-      □     |
+   __      __      __      __      __   _|
+
+
+--------------------------------------------------
+
+
+              CURRENT PLAN
+   7      None    None    None    None   | 7
+   1       13     None    None    None   | 14
+  None     2      None     5       4     | 11
+  None    None     2      None     12    | 14
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+            POTENTIAL TABLE
+  None     8       28      7       3     | 0
+  None    None     20      4       1     | -6
+   -4     None     16     None    None   | -3
+  -10      -3     None    -15     None   | 6
+   __      __      __      __      __   _|
+   8       7       -5      12      6
+
+
+                 CURVE
+                                         |
+                                         |
+                           □       □     |
+                           ⧆       □     |
+   __      __      __      __      __   _|
+
+
+--------------------------------------------------
+
+
+              CURRENT PLAN
+   7      None    None    None    None   | 7
+   1       13     None    None    None   | 14
+  None     2      None    None     9     | 11
+  None    None     2       5       7     | 14
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+            POTENTIAL TABLE
+  None     8       28      22      3     | 0
+  None    None     20      19      1     | -6
+   -4     None     16      15     None   | -3
+  -10      -3     None    None    None   | 6
+   __      __      __      __      __   _|
+   8       7       -5      -3      6
+
+
+                 CURVE
+                                         |
+   □       □                             |
+   ↑       □       -⟶      -⟶      □     |
+   ⧆       ⟵-      ⟵-      ⟵-      □     |
+   __      __      __      __      __   _|
+
+
+--------------------------------------------------
+
+
+              CURRENT PLAN
+   7      None    None    None    None   | 7
+  None     14     None    None    None   | 14
+  None     1      None    None     10    | 11
+   1      None     2       5       6     | 14
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+            POTENTIAL TABLE
+  None     -2      18      12      -7    | 0
+   10     None     20      19      1     | -16
+   6      None     16      15     None   | -13
+  None     -3     None    None    None   | -4
+   __      __      __      __      __   _|
+   8       17      5       7       16
+
+
+                 CURVE
+   □       -⟶      -⟶      -⟶      ⧆     |
+   ↑                               ↓     |
+   ↑                               ↓     |
+   □       ⟵-      ⟵-      ⟵-      □     |
+   __      __      __      __      __   _|
+
+
+--------------------------------------------------
+
+
+              CURRENT PLAN
+   1      None    None    None     6     | 7
+  None     14     None    None    None   | 14
+  None     1      None    None     10    | 11
+   7      None     2       5      None   | 14
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+            POTENTIAL TABLE
+  None     5       18      12     None   | 0
+   3      None     13      12      1     | -9
+   -1     None     9       8      None   | -6
+  None     4      None    None     7     | -4
+   __      __      __      __      __   _|
+   8       10      5       7       9
+
+
+                 CURVE
+   □       -⟶      -⟶      -⟶      □     |
+   ↑                               ↓     |
+   ⧆       ⟵-      ⟵-      ⟵-      □     |
+                                         |
+   __      __      __      __      __   _|
+
+
+--------------------------------------------------
+
+
+              CURRENT PLAN
+  None    None    None    None     7     | 7
+  None     14     None    None    None   | 14
+   1       1      None    None     9     | 11
+   7      None     2       5      None   | 14
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+            POTENTIAL TABLE
+   1       5       19      13     None   | 0
+   4      None     14      13      1     | -9
+  None    None     10      9      None   | -6
+  None     3      None    None     6     | -3
+   __      __      __      __      __   _|
+   7       10      4       6       9
+
+the plan is optimal
+final cost is 154
+
+Process finished with exit code 0

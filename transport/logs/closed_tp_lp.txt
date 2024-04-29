@@ -1,0 +1,274 @@
+/Users/smsarov/PycharmProjects/meth_opt/venv/bin/python /Users/smsarov/PycharmProjects/meth_opt/main.py
+
+                 GIVEN
+   8       15      23      19      9     | 7
+   2       1       9       10      1     | 14
+   1       4       8       9       3     | 11
+   7       3       13      10      3     | 14
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+           NORTH-WEST METHOD
+   7      None    None    None    None   | 0
+   1       13     None    None    None   | 0
+  None     2       2       5       2     | 0
+  None    None    None    None     14    | 0
+   __      __      __      __      __   _|
+   0       0       0       0       0
+
+start cost is 188
+
+--------------------------------------------------
+
+
+              CURRENT PLAN
+   7      None    None    None    None   | 7
+   1       13     None    None    None   | 14
+  None     2       2       5       2     | 11
+  None    None    None    None     14    | 14
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+            POTENTIAL TABLE
+  None     8       12      7       3     | 0
+  None    None     4       4       1     | -6
+   -4     None    None    None    None   | -3
+   2       -1      5       1      None   | -3
+   __      __      __      __      __   _|
+   8       7       11      12      6
+
+
+                 CURVE
+                                         |
+   □       □                             |
+   ⧆       □                             |
+                                         |
+   __      __      __      __      __   _|
+
+
+--------------------------------------------------
+
+
+              CURRENT PLAN
+   7      None    None    None    None   | 7
+  None     14     None    None    None   | 14
+   1       1       2       5       2     | 11
+  None    None    None    None     14    | 14
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+            POTENTIAL TABLE
+  None     4       8       3       -1    | 0
+   4      None     4       4       1     | -10
+  None    None    None    None    None   | -7
+   6       -1      5       1      None   | -7
+   __      __      __      __      __   _|
+   8       11      15      16      10
+
+
+                 CURVE
+   □       -⟶      -⟶      -⟶      ⧆     |
+   ↑                               ↓     |
+   □       ⟵-      ⟵-      ⟵-      □     |
+                                         |
+   __      __      __      __      __   _|
+
+
+--------------------------------------------------
+
+
+              CURRENT PLAN
+   5      None    None    None     2     | 7
+  None     14     None    None    None   | 14
+   3       1       2       5      None   | 11
+  None    None    None    None     14    | 14
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+            POTENTIAL TABLE
+  None     4       8       3      None   | 0
+   4      None     4       4       2     | -10
+  None    None    None    None     1     | -7
+   5       -2      4       0      None   | -6
+   __      __      __      __      __   _|
+   8       11      15      16      9
+
+
+                 CURVE
+   □       -⟶      -⟶      -⟶      □     |
+   ↑                               ↓     |
+   □       □                       ↓     |
+           ⧆       ⟵-      ⟵-      □     |
+   __      __      __      __      __   _|
+
+
+--------------------------------------------------
+
+
+              CURRENT PLAN
+   4      None    None    None     3     | 7
+  None     14     None    None    None   | 14
+   4      None     2       5      None   | 11
+  None     1      None    None     13    | 14
+   __      __      __      __      __   _|
+   8       15      2       5       16
+
+
+            POTENTIAL TABLE
+  None     6       8       3      None   | 0
+   2      None     2       2       0     | -8
+  None     2      None    None     1     | -7
+   5      None     4       0      None   | -6
+   __      __      __      __      __   _|
+   8       9       15      16      9
+
+the plan is optimal
+final cost is 180
+
+(   1     1     1     1     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0   )      <=  7
+(   0     0     0     0     0     1     1     1     1     1     0     0     0     0     0     0     0     0     0     0   )      <=  14
+(   0     0     0     0     0     0     0     0     0     0     1     1     1     1     1     0     0     0     0     0   )      <=  11
+(   0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     1     1     1     1     1   )      <=  14
+(   1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0   ) * x  >=  8
+(   0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     1     0     0     0   )      >=  15
+(   0     0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     1     0     0   )      >=  2
+(   0     0     0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     1     0   )      >=  5
+(   0     0     0     0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     1   )      >=  16
+
+x_1 >= 0
+x_2 >= 0
+x_3 >= 0
+x_4 >= 0
+x_5 >= 0
+x_6 >= 0
+x_7 >= 0
+x_8 >= 0
+x_9 >= 0
+x_10 >= 0
+x_11 >= 0
+x_12 >= 0
+x_13 >= 0
+x_14 >= 0
+x_15 >= 0
+x_16 >= 0
+x_17 >= 0
+x_18 >= 0
+x_19 >= 0
+x_20 >= 0
+
+f(x) = 8*x_1 + 15*x_2 + 23*x_3 + 19*x_4 + 9*x_5 + 2*x_6 + 1*x_7 + 9*x_8 + 10*x_9 + 1*x_10 + 1*x_11 + 4*x_12 + 8*x_13 + 9*x_14 + 3*x_15 + 7*x_16 + 3*x_17 + 13*x_18 + 10*x_19 + 3*x_20 -> min
+
+(   1     1     1     1     1     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     1     0     0     0     0     0     0     0     0   )      =  7
+(   0     0     0     0     0     1     1     1     1     1     0     0     0     0     0     0     0     0     0     0     0     1     0     0     0     0     0     0     0   )      =  14
+(   0     0     0     0     0     0     0     0     0     0     1     1     1     1     1     0     0     0     0     0     0     0     1     0     0     0     0     0     0   )      =  11
+(   0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     1     1     1     1     1     0     0     0     1     0     0     0     0     0   )      =  14
+(   1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     0     0     0     0     -1    0     0     0     0   ) * x  =  8
+(   0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     0     0     0     0     -1    0     0     0   )      =  15
+(   0     0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     0     0     0     0     -1    0     0   )      =  2
+(   0     0     0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     0     0     0     0     -1    0   )      =  5
+(   0     0     0     0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     1     0     0     0     0     0     0     0     0     -1  )      =  16
+
+x_1 >= 0
+x_2 >= 0
+x_3 >= 0
+x_4 >= 0
+x_5 >= 0
+x_6 >= 0
+x_7 >= 0
+x_8 >= 0
+x_9 >= 0
+x_10 >= 0
+x_11 >= 0
+x_12 >= 0
+x_13 >= 0
+x_14 >= 0
+x_15 >= 0
+x_16 >= 0
+x_17 >= 0
+x_18 >= 0
+x_19 >= 0
+x_20 >= 0
+x_21 >= 0
+x_22 >= 0
+x_23 >= 0
+x_24 >= 0
+x_25 >= 0
+x_26 >= 0
+x_27 >= 0
+x_28 >= 0
+x_29 >= 0
+
+f(x) = 8*x_1 + 15*x_2 + 23*x_3 + 19*x_4 + 9*x_5 + 2*x_6 + 1*x_7 + 9*x_8 + 10*x_9 + 1*x_10 + 1*x_11 + 4*x_12 + 8*x_13 + 9*x_14 + 3*x_15 + 7*x_16 + 3*x_17 + 13*x_18 + 10*x_19 + 3*x_20 + 0*x_21 + 0*x_22 + 0*x_23 + 0*x_24 + 0*x_25 + 0*x_26 + 0*x_27 + 0*x_28 + 0*x_29 -> min
+not degenerate
+not degenerate
+not degenerate
+not degenerate
+not degenerate
+not degenerate
+not degenerate
+not degenerate
+change basis
+change basis
+u_nulls
+change basis
+change basis
+change basis
+u_nulls
+not degenerate
+not degenerate
+not degenerate
+optimal solution found
+
+  SUBPROBLEM IS SOLVED
+  start vector is: (  0.0   0.0   0.0   0.0   7.0   0.0   0.0   0.0   5.0   9.0   0.0   9.0   2.0   0.0   0.0   8.0   6.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0   0.0  )
+
+u_nulls
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+change basis
+u_nulls
+u_nulls
+optimal solution found
+optimal solution is:
+[4.0, 0.0, 0.0, 0.0, 3.0, 0.0, 1.0, 0.0, 0.0, 13.0, 4.0, 0.0, 2.0, 5.0, 0.0, 0.0, 14.0, 0.0, 0.0, 0.0]
+the respective cost is:
+180.0
+
+Process finished with exit code 0
